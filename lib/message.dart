@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
+import 'package:test_01/task2/agency.dart';
 
 class message extends StatelessWidget {
   const message({super.key});
@@ -29,15 +29,20 @@ class message extends StatelessWidget {
                 ),
               ),
             ),
-            Card(
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: CircleAvatar(),
-                    title: Text("Tarikul Abir"),
-                    subtitle: Text("Apr 15,2024 - Apr 15, 2024"),
-                  )
-                ],
+            InkWell(
+              onTap: () {
+                Get.to(agency());
+              },
+              child: Card(
+                child: Column(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(),
+                      title: Text("Tarikul Abir"),
+                      subtitle: Text("Apr 15,2024 - Apr 15, 2024"),
+                    )
+                  ],
+                ),
               ),
             ),
             Card(
