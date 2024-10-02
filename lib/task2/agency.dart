@@ -84,15 +84,20 @@ class agency extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Card(
-              elevation: 2,
-              child: Column(
-                children: [
-                  ListTile(
-                      leading: Icon(Icons.score),
-                      title: Text("Host Management"),
-                      trailing: Icon(Icons.backspace_rounded))
-                ],
+            child: InkWell(
+              onTap: () {
+                Get.to(create_agency());
+              },
+              child: Card(
+                elevation: 2,
+                child: Column(
+                  children: [
+                    ListTile(
+                        leading: Icon(Icons.score),
+                        title: Text("Host Management"),
+                        trailing: Icon(Icons.backspace_rounded))
+                  ],
+                ),
               ),
             ),
           ),
